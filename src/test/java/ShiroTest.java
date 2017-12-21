@@ -29,7 +29,7 @@ public class ShiroTest {
 		}
 
 		Assert.assertEquals(true, subject.isAuthenticated()); //断言用户已经登录
-
+		Assert.assertTrue(subject.isPermitted("user1:update"));
 		//6、退出
 		subject.logout();
 	}
